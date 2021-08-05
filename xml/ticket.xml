@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ticket.xsd"> 
+    <ticket id="1345" userId="102">
+        <openDate>2021-04-02T08:03:55</openDate>   <!--  date Format yyyy-mm-ddThh:mm:ss.sss. -->
+        <status>Resolved</status>
+        <category>Returns</category>
+        <subject>Broken Crockery Return</subject>
+        <ticketMessages>
+            <message userId="102" dateTime="2021-04-02T08:03:55">Hello, few days ago I ordered crockery, yesterday I got it and some pieces were broken that was disappointed. I would like to return that crockery. Can you suggest me how I can return this?</message>
+            <message userId="101" dateTime="2021-04-03T09:00:00">Please visit our website www.xyzgrocery.ca and open your account and there you will get step by step guidance to return an item. </message>
+            <message userId="102" dateTime="2021-04-03T10:20:00"> Thank you for your help.</message>
+            <message userId="101" dateTime="2021-04-03T10:40:00">Your pleasure. </message>
+        </ticketMessages>
+    </ticket>
+    <ticket id="1346" userId="103">
+        <openDate>2021-05-28T08:03:55</openDate>  
+        <status>In-Progress</status>
+        <category>General</category>
+        <subject>Washing Machine details</subject>
+        <ticketMessages>
+            <message userId="103" dateTime="2021-05-28T08:03:55">Hey, I would like to buy new washing machine and I was checking online there is only black color available. Is there any other color available in your store.</message>
+        </ticketMessages>
+    </ticket>
+    <ticket id="1347" userId="102">
+        <openDate>2021-05-28T10:03:00</openDate>   
+        <status>In-Progress</status>
+        <category>Services</category>
+        <subject>Accepted delivery for the product.</subject>
+        <ticketMessages>
+            <message userId="102" dateTime="2021-05-28T10:03:00">I ordered few items week ago and the delivery for that was mntioned yesterday, but didnt recieve yet. When can I accept the delivery.  </message>
+            <message userId="104" dateTime="2021-05-28T12:30:00">Sorry for your inconvince, due some techincial error the status is not being updated. Your order would be delivered by tomorrow end of the day.</message>
+        </ticketMessages>
+    </ticket>
+</tickets>

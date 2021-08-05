@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="first" type="xs:string"/>
+                                        <xs:element name="last" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="title" type="title"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="userName" type="xs:string"/>
+                            <xs:element name="password" type="xs:string"/>
+                            <xs:element name="email" type="emailRegex"/>
+                            <xs:element name="phoneNumber" type="Telephone"/> 
+                            <xs:element name="location" type="xs:string"/>
+                       </xs:sequence>
+                        <xs:attribute name="role" type="userRole" use="required" />
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="emailRegex">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="250" />
+            <xs:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Telephone">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="userRole">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Customer" />
+            <xs:enumeration value="Support Staff" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="title">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Mr" />
+            <xs:enumeration value="Mrs" />
+            <xs:enumeration value="Ms" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+<!-- Link used for email -  https://github.com/metashare/META-SHARE/issues/527 -->
+<!-- Link for Phone number -  https://stackoverflow.com/questions/36993198/how-do-i-represent-phone-numbers-in-xsd -->

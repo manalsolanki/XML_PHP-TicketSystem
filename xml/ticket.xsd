@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tickets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="openDate" type="xs:dateTime"/>
+                            <xs:element name="status" type="status"/>
+                            <xs:element name="category" type="category"/>
+                            <xs:element name="subject" type="xs:string"/>
+                            <xs:element name="ticketMessages">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="message" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="userId" type="xs:positiveInteger" use="required"/>
+                                                        <xs:attribute name="dateTime" type="xs:dateTime" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                           
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+                        <xs:attribute name="userId" type="xs:positiveInteger" use="required" />          
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="status">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Open" />
+            <xs:enumeration value="Pending" />
+            <xs:enumeration value="Resolved" />
+            <xs:enumeration value="In-Progress"/>
+            <xs:enumeration value="Closed" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="category">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="General" />
+            <xs:enumeration value="Services" />
+            <xs:enumeration value="Returns" />
+            <xs:enumeration value="Search Item" />
+            <xs:enumeration value="Payment"/>
+            <xs:enumeration value="Account" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

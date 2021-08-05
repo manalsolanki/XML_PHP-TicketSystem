@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="user.xsd">
+    <user role="Support Staff" id="101">
+        <name title="Ms">
+            <first>Manal</first>
+            <last>Solanki</last>
+        </name>
+        <userName>Manal</userName>
+        <password>12345dddwddddddddddddddde23</password>
+        <email>97manal@gmail.com</email>
+        <phoneNumber>437-779-0789</phoneNumber>
+        <location>Etobicoke</location>
+    </user>
+    <user role="Customer" id="102">
+        <name title="Mrs">
+            <first>Esha</first>
+            <last>Shah</last>
+        </name>
+        <userName>Esha</userName>
+        <password>12345dsssnkvkffnirjefmfdkll</password>
+        <email>esha.s@yahoo.co.in</email>
+        <phoneNumber>428-904-6758</phoneNumber>
+        <location>Brampton</location>
+    </user>
+    <user role="Customer" id="103">
+        <name title="Mr">
+            <first>Robert</first>
+            <last>Smith</last>
+        </name>
+        <userName>Robert</userName>
+        <password>91ec1f9324753048c0096d036a694f86</password>
+        <email>robert@hotmail.com</email>
+        <phoneNumber>439-778-0789</phoneNumber>
+        <location>Edmonton</location>
+    </user>
+    <user role="Support Staff" id="104">
+        <name title="Ms">
+            <first>Sachi</first>
+            <last>Despande</last>
+        </name>
+        <userName>Sachi</userName>
+        <password>91ec1f9324753048c0096d036a694f86</password>
+        <email>sachi.solanki@gmail.com</email>
+        <phoneNumber>437-774-9678</phoneNumber>
+        <location>Windsor</location>
+    </user>
+</users>
