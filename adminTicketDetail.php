@@ -155,7 +155,7 @@ if (isset($_POST['addMessage'])) {
                     </div>
                     <input type="hidden" name="tId" value="<?php echo $ticketId; ?>">
                     <p class="text-danger"><?= isset($errorMsg) ? $errorMsg : ""; ?></p>
-                    <input class="btn btn-primary" type="submit" name="addMessage" value="Add Message" role="button"/>
+                        <input class="btn btn-primary" type="submit" name="addMessage" value="Add Message" role="button"/>
                 </form>
             </div>
         </div>
